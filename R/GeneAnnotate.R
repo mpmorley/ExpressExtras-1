@@ -25,10 +25,13 @@ GeneAnnotate <- function(ids,organism) {
     stop(paste("Please provide an organism human or mouse\n"), call. = FALSE)
   }
 
-  if(organism=="mouse"){
-    #load('~/dsdata/NGSshare/mm9_data/Rdata/Mus_musculus.NCBIM37.67.RData')
+  if(organism=="mm9"){
     data('Mus_musculus.NCBIM37.67')
     geneannotation=Mus_musculus.NCBIM37.67
+  }
+  else if(organism=="mm10"){
+    data('Mus_musculus.GRCm38.82')
+    geneannotation=Mus_musculus.GRCm38.82
   }
   else if(organism=="human"){
     #load('~/dsdata/NGSshare/hg19_data/RData/gencode.v19.annotation.RData')
