@@ -45,12 +45,7 @@ GeneAnnotate <- function(ids,organism) {
   }else{
     stop("Wrong organism")
   }
-
-  # genes <- geneannotation %>% filter (gene_id %in% ids) %>%
-  #   dplyr::rename(biotype=gene_biotype, SYMBOL=gene_name, ENSEMBL=gene_id) %>%
-  #   mutate(geneloc=paste(chr,':',start,'-',end,sep=''),Length=abs(end-start)) %>%
-  #   dplyr::select(SYMBOL,ENSEMBL,ENTREZID,biotype,geneloc,Length) %>% arrange(ENSEMBL)
-
+  geneannotation = as.data.frame(geneannotation)
   genes <- geneannotation %>% filter (gene_id %in% ids) %>%
     dplyr::rename(biotype=gene_biotype, SYMBOL=gene_name, ENSEMBL=gene_id) %>%
     mutate(geneloc=paste(chr,':',start,'-',end,sep='')) %>%
