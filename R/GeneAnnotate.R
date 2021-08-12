@@ -33,6 +33,10 @@ GeneAnnotate <- function(ids,organism) {
     data('Mus_musculus.GRCm38.82')
     geneannotation=Mus_musculus.GRCm38.82
   }
+  else if(organism=="mm39"){
+    data('Mus_musculus.GRCm39.104')
+    geneannotation=Mus_musculus.GRCm39.104
+  }
   else if(organism=="human"){
     #load('~/dsdata/NGSshare/hg19_data/RData/gencode.v19.annotation.RData')
     data('gencode.v19.annotation')
