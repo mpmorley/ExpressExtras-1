@@ -10,7 +10,7 @@ GeneAnnotate(ids, organism)
 \arguments{
 \item{ids}{: List of ENSEMBL IDs}
 
-\item{organism}{: mouse for Mus musculus (mouse) Rat for Rattus norvegicus (Rat) and human for Homo sapiens (humans)}
+\item{organism}{: mm9/mm10/mm39/hg19/hg38/rn6}
 }
 \value{
 Dataframe with limma data and the annotation

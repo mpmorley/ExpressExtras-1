@@ -12,7 +12,7 @@
 #' Return a data frame of gene annotations
 #' Takes a dataframe having output from limma, cleans up to remove unwanted columns and annotates it
 #' @param ids : List of ENSEMBL IDs
-#' @param organism : mouse for Mus musculus (mouse) Rat for Rattus norvegicus (Rat) and human for Homo sapiens (humans)
+#' @param organism : mm9/mm10/mm39/hg19/hg38/rn6
 #' @return Dataframe with limma data and the annotation
 #' @import org.Mm.eg.db EnsDb.Mmusculus.v75 org.Hs.eg.db org.Rn.eg.db EnsDb.Hsapiens.v75 dplyr
 #' @export
@@ -45,7 +45,7 @@ GeneAnnotate <- function(ids,organism) {
     data('Homo_sapiens.GRCh38.104')
     geneannotation=Homo_sapiens.GRCh38.104.gtf
   }
-  else if(organism=="Rat"){
+  else if(organism=="rn6"){
     #load('~/dsdata/NGSshare/hg19_data/RData/gencode.v19.annotation.RData')
     data('Rattus_norvegicus.Rnor_6.0.87')
     geneannotation=Rattus_norvegicus.Rnor_6.0.87
