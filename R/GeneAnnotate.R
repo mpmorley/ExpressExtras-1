@@ -50,7 +50,7 @@ GeneAnnotate <- function(ids,organism) {
     data('Rattus_norvegicus.Rnor_6.0.87')
     geneannotation=Rattus_norvegicus.Rnor_6.0.87
   }else{
-    stop("Wrong organism")
+    stop("Wrong organism.Choose from mm9/mm10/mm39/hg19/hg38/rn6")
   }
   geneannotation = as.data.frame(geneannotation)
   genes <- geneannotation %>% filter (gene_id %in% ids) %>%
