@@ -53,7 +53,7 @@ GeneAnnotate <- function(ids,organism) {
     stop("Wrong organism.Choose from mm9/mm10/mm39/hg19/hg38/rn6")
   }
   geneannotation = as.data.frame(geneannotation)
-  genes <- geneannotation %>% filter (gene_id %in% ids) %>%
+  genes <- geneannotation %>% dplyr::filter (gene_id %in% ids) %>%
     dplyr::rename(biotype=gene_biotype, SYMBOL=gene_name, ENSEMBL=gene_id) %>%
     mutate(geneloc=paste(chr,':',start,'-',end,sep='')) %>%
     dplyr::select(SYMBOL,ENSEMBL,ENTREZID,biotype,geneloc) %>% arrange(ENSEMBL)
